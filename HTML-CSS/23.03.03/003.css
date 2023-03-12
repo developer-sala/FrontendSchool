@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'KCC-Ganpan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+div {
+  border: 3px dashed rgb(247, 246, 245);
+  width: 400px;
+  text-align: center;
+  background-color: rgb(207, 243, 241);
+  border-radius: 20px;
+}
+h1,
+h2 {
+  font-family: 'KCC-Ganpan';
+}
+p {
+  font-family: 'KCC-Ganpan';
+  font-size: 2em;
+}
+p strong {
+  color: lightsalmon;
+  text-decoration: underline wavy;
+}
+.word2 {
+  color: pink;
+}
+i {
+  font-size: 30px;
+  color: white;
+}
