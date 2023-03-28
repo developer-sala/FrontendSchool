@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미니 스타크래프트 활용</title>
+  <style>
+    .background {
+      position: relative;
+      background-color: gray;
+    }
+
+    #ghost {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 60px;
+    }
+
+    #monster {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: 80px;
+      right: 250px;
+    }
+
+    #hammer {
+      display: none;
+      position: absolute;
+      top: 140px;
+      left: 150px;
+      width: 50px;
+      height: 30px;
+      z-index: 2;
+    }
+
+    /* 미니스타크래프트 
+    .background {
+      position: relative;
+      background-image: url('');
+      background-size: 500px 330px;
+      width: 500px;
+      height: 330p;
+      x
+    }
+
+    #drone {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 60px;
+    }
+
+    #bunker {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: 80px;
+      right: 20px;
+    }
+
+    #spit {
+      display: none;
+      position: absolute;
+      top: 140px;
+      left: 150px;
+      width: 50px;
+      height: 30px;
+      z-index: 2;
+    }
+    */
+  </style>
+  <script src="https://kit.fontawesome.com/514fec19c7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1 id="hp">HP : 3</h1>
+  <div class="background">
+    <i id="ghost" class="fa-solid fa-ghost fa-5x"></i>
+    <i id="hammer" class="fa-solid fa-gavel fa-3x"></i>
+    <i id="monster" class="fa-brands fa-optin-monster fa-8x"></i>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script>
+    let hp = 3;
+    $('#ghost').click(function () {
+      $('#hammer').fadeIn();
+      $('#hammer').animate({ left: '+=250' });
+      $('#hammer').fadeOut(function () {
+        hp = hp - 1;
+        $('#hp').text('HP: ' + hp);
+        if (hp == 0) {
+          $('#monster').fadeOut();
+        }
+      });
+      $('#hammer').css({ left: '150px' });
+    })
+  </script>
+
+  <!-- 미니스타크래프트 
+    <h1 id="hp">HP : 3</h1>
+  <div class='background'>
+    <img id='drone' src="drone.png" alt="drone">
+    <img id='spit' src="spit.png" alt="spit">
+    <img id='bunker' src="bunker.png" alt="bunker">
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+  </script>
+  <script>
+    var hp = 3;
+    $('#drone').click(function () {
+      $('#spit').fadeIn();
+      $('#spit').animate({ left: '+=250' });
+      $('#spit').fadeOut(function () {
+        hp = hp - 1;
+        $('#hp').text('HP : ' + hp);
+        if (hp == 0) {
+          $('#bunker').fadeOut();
+        }
+      });
+      $('#spit').css({ left: '150px' });
+
+    })
+  </script>  -->
+</body>
+
+</html>
