@@ -1,0 +1,8 @@
+@debug 100 > 50; // true
+@debug 10px <= 17px; // true
+@debug 10px == 17px; // false
+@debug 10px != 17px; // true
+@debug 96px >= 30px; // true
+@debug 1000ms <= 1s; // true
+
+//추가가 필요하다.
