@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const foods = [
+        { cookingTime: 10, deliveryTime: 15 },
+        { cookingTime: 7, deliveryTime: 13 },
+        { cookingTime: 3, deliveryTime: 15 },
+        { cookingTime: 15, deliveryTime: 5 },
+        { cookingTime: 11, deliveryTime: 20 },
+        { cookingTime: 13, deliveryTime: 10 },
+      ];
+
+      // 버블정렬로 풀어보기
+      function bubbleSort([...arr]) {
+        for(let i = 0; i < arr.length -1; i++) {
+            for(let j = 0 j < arr.length - 1; j++) {
+                const timeOne  = arr[j].cookingTime + food[j].deliveryTime;
+                const timeTwo = fodds[j+1].cookingTime + fodds[j+1].deliveryTime;
+
+                if(timeTwo < timeOne) {
+                    [foods[j], foods[j+1]] = [foods[j + 1], foods[j]];
+                    isSorted = false;
+                }
+
+            }
+            if(isSorted) break;
+        }
+        return arr;
+      }
+      bubbleSort(foods);
+
+      function selectionSort([...foods]) {
+        for(let i = 0; i < foods.length; i++) {
+            let minimumIndex = i;
+
+            for(let j = i + 1; j < foods.length; j++) {
+                const timeOne = food[j].cookingTime + foods[j].deliveryTime;
+                const timeTwo = foods[minimumIndex].cookingTime + foods
+                [minimumIndex].deliveryTime;
+
+                if(timeOne < timeTwo) {
+                    minimumIndex = k
+                }
+            }
+            if(minimumIndex !== i) {}
+        }
+      }
+
+      // 삽입정렬로 풀어보기
+      function insertionSort([...foods]) {
+        return foods
+      }
+    </script>
+  </body>
+</html>
